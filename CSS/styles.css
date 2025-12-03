@@ -103,7 +103,7 @@ ul {
 
 .button:hover {
   background-color: transparent;
-  color: #465929;
+  color: var(--color-brand-dark);
 }
 
 /* Link */
@@ -113,7 +113,7 @@ ul {
 }
 
 .link:hover {
-  color: #465929;
+  color: var(--color-brand-light);
   font-weight: 600;
 }
 
@@ -287,22 +287,57 @@ ul {
   color: var(--color-primary-light);
 }
 
+/* Carousel */
+.carousel-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  pad: 0px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  cursor: pointer;
+}
+
+.carousel-button:hover{
+  background-color: var(--color-primary-dark);
+}
+
+.carousel-button:hover .carousel-arrow{
+  fill: var(--color-primary-light);
+}
+
+.carousel-arrow{
+  fill: var(--color-primary-dark);
+}
+
 /* Contacts section */
 .contact-title {
   margin-bottom: 16px;
 }
 
-/* Footert */
+/* Footer */
 .address-link {
   font-size: 16px;
   font-weight: 300;
   color: var(--color-primary-light);
+  text-decoration: none;
 }
 
 .address-link:hover {
   font-size: 16px;
   font-weight: 300;
   color: var(--color-brand-light);
+}
+
+.adress-icon{
+  fill: var(--color-primary-light);
+}
+
+.adress-icon:hover{
+  fill: var(--color-brand-light);
 }
 
 .address-copyright {
