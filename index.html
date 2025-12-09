@@ -32,7 +32,9 @@
               <li><a class="link" href="#contacts-section">Контакти</a></li>
             </ul>
           </nav>
-          <button class="button" type="button">Замовити дзвінок</button>
+          <button class="button modal-btn-open" type="button">
+            Замовити дзвінок
+          </button>
         </div>
       </div>
     </header>
@@ -82,7 +84,8 @@
       <section class="section" id="chefs-section">
         <div class="container">
           <h2 class="chefs-title section-title centered">
-            Наші найкращі <span class="accent">шеф-кухарі</span>
+            Наші найкращі <br />
+            <span class="accent">шеф-кухарі</span>
           </h2>
           <ul class="chefs-list">
             <li class="chefs-item">
@@ -120,9 +123,7 @@
                       любов, з якою ми ділимось кожен раз з Вами через нашу
                       випічку!
                     </p>
-                    <p>
-                      Я зроблю для вас унікальну начинку на будь який смак!
-                    </p>
+                    <p>Я зроблю для вас унікальну начинку на будь який смак!</p>
                   </div>
                 </div>
               </article>
@@ -248,13 +249,13 @@
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/">
+                <a href="https://www.facebook.com/" target="_blank">
                   <svg class="address-icon" width="32" height="32">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                   <!-- <img src="./images/facebook_black_logo_icon_147136 1.svg" alt="Facebook-icon"> -->
                 </a>
-                <a href="https://www.instagram.com/">
+                <a href="https://www.instagram.com/" target="_blank">
                   <svg class="address-icon" width="32" height="32">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
@@ -272,5 +273,13 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop">
+      <div class="modal">
+        <button type="button" class="modal-btn-close">Close</button>
+      </div>
+      
+    </div>
+    <script src="/js/modal.js"></script>
   </body>
 </html>
