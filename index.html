@@ -194,7 +194,49 @@
                 Приєднуйтеся до мережі пекарень
               </h2>
               <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-              <!-- Form -->
+              <form name="contact-form" autocomplete="off">
+                <div class="form-field">
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                  />
+                  <label class="form-label" for="user-name">Ім'я</label>
+                </div>
+
+                <div class="form-field">
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="user-tel"
+                    name="user-tel"
+                  />
+                  <label class="form-label" for="user-tel">Телефон</label>
+                </div>
+
+                <div class="form-field">
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="user-email"
+                    name="user-email"
+                  />
+                  <label class="form-label" for="user-email"
+                    >Електронна пошта</label
+                  >
+                </div>
+
+                <button class="button form-button" type="submit">
+                  Замовити дзвінок
+                </button>
+                <p class="form-terms">
+                  Натискаючи на кнопку я погоджуюсь
+                  <a class="form-terms-link" href="#"
+                    >з політикою конфіденційності</a
+                  >
+                </p>
+              </form>
             </div>
             <iframe
               class="contact-map"
@@ -276,6 +318,47 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button type="button" class="modal-btn-close">Close</button>
+        <h2>Замовити дзвінок</h2>
+        <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+        <form name="modal-form" autocomplete="on" novalidate>
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="text"
+              id="user-name"
+              name="user-name"
+            />
+            <label class="form-label" for="user-name">Ім'я</label>
+          </div>
+
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="tel"
+              id="user-tel"
+              name="user-tel"
+            />
+            <label class="form-label" for="user-tel">Телефон</label>
+          </div>
+
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="email"
+              id="user-email"
+              name="user-email"
+            />
+            <label class="form-label" for="user-email">Електронна пошта</label>
+          </div>
+
+          <button class="button form-button" type="submit">
+            Замовити дзвінок
+          </button>
+          <p class="form-terms">
+            Натискаючи на кнопку я погоджуюсь
+            <a class="form-terms-link" href="#">з політикою конфіденційності</a>
+          </p>
+        </form>
       </div>
     </div>
     <script src="/js/modal.js"></script>
