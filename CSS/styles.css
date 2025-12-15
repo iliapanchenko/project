@@ -542,7 +542,8 @@ ul {
   transition: transform 0.3s;
 }
 
-.form-input:focus + .form-label {
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
   transform: translate(-36px, -40px);
 }
 

@@ -199,6 +199,7 @@
                   <input
                     class="form-input"
                     type="text"
+                    placeholder=" "
                     id="user-name"
                     name="user-name"
                   />
@@ -209,8 +210,10 @@
                   <input
                     class="form-input"
                     type="tel"
+                    placeholder=" "
                     id="user-tel"
                     name="user-tel"
+                    pattern="^\+[0-9]{12}"
                   />
                   <label class="form-label" for="user-tel">Телефон</label>
                 </div>
@@ -219,6 +222,7 @@
                   <input
                     class="form-input"
                     type="email"
+                    placeholder=" "
                     id="user-email"
                     name="user-email"
                   />
@@ -320,35 +324,44 @@
         <button type="button" class="modal-btn-close">Close</button>
         <h2>Замовити дзвінок</h2>
         <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-        <form name="modal-form" autocomplete="on" novalidate>
+        <form name="modal-form" autocomplete="off">
           <div class="form-field">
             <input
               class="form-input"
               type="text"
-              id="user-name"
-              name="user-name"
+              placeholder=" "
+              id="user-name-modal"
+              name="user-name-modal"
+              required
             />
-            <label class="form-label" for="user-name">Ім'я</label>
+            <label class="form-label" for="user-name-modal">Ім'я</label>
           </div>
 
           <div class="form-field">
             <input
               class="form-input"
               type="tel"
-              id="user-tel"
-              name="user-tel"
+              placeholder=" "
+              id="user-tel-modal"
+              name="user-tel-modal"
+              required
+              pattern="^\+[0-9]{12}"
             />
-            <label class="form-label" for="user-tel">Телефон</label>
+            <label class="form-label" for="user-tel-modal">Телефон</label>
           </div>
 
           <div class="form-field">
             <input
               class="form-input"
               type="email"
-              id="user-email"
-              name="user-email"
+              placeholder=" "
+              id="user-email-modal"
+              name="user-email-modal"
+              required
             />
-            <label class="form-label" for="user-email">Електронна пошта</label>
+            <label class="form-label" for="user-email-modal">
+              Електронна пошта</label
+            >
           </div>
 
           <button class="button form-button" type="submit">
