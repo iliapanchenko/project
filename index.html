@@ -13,7 +13,7 @@
       rel="stylesheet"
     /> -->
     <!-- Styles -->
-    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/SCSS/main.css" />
   </head>
   <body>
     <header class="header">
@@ -61,12 +61,13 @@
           <div class="traditions-container">
             <div class="traditions-content">
               <h2 class="traditions-title section-title">
-                Новий формат традицій
+                Новий формат <br />
+                традицій
               </h2>
               <p class="traditions-text">
                 <span class="brand uppercase">shop bakery</span> — це пекарня,
-                яка взяла все найкраще, і зберегла смак традиційної випічки та
-                натуральність інгредієнтів.
+                яка взяла все найкраще, і зберегла смак <br />
+                традиційної випічки та натуральність інгредієнтів.
               </p>
               <p class="traditions-text">
                 Ми працюємо як найвідоміші мережі —
@@ -75,6 +76,7 @@
               </p>
             </div>
             <img
+              class="traditions-section-photo"
               src="./images/bacer-man.jpg"
               alt="Чоловік пекар дивиться на батони із посмішкою"
             />
@@ -143,6 +145,11 @@
             <ul class="formats-list">
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/Walsrus.jpg"
+                    alt="Walrus format"
+                  />
                   <h3 class="format-title" lang="en">Walrus</h3>
                   <div class="format-text">
                     <p>Площа: до 120 м2</p>
@@ -155,6 +162,11 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/Horseshoe.jpg"
+                    alt="Horseshoe format"
+                  />
                   <h3 class="format-title" lang="en">Horseshoe</h3>
                   <div class="format-text">
                     <p>Площа: до 25 м2</p>
@@ -167,6 +179,11 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/Handlebar.jpg"
+                    alt="Horseshoe format"
+                  />
                   <h3 class="format-title" lang="en">Handlebar</h3>
                   <div class="format-text">
                     <p>Площа: до 15 м2</p>
@@ -193,7 +210,9 @@
               <h2 class="contact-title section-title">
                 Приєднуйтеся до мережі пекарень
               </h2>
-              <p>Заповни форму, щоб ми звʼязались з тобою!</p>
+              <p class="contact-text">
+                Заповни форму, щоб ми звʼязались з тобою!
+              </p>
               <form name="contact-form" autocomplete="off">
                 <div class="form-field">
                   <input
@@ -321,9 +340,15 @@
     </footer>
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button type="button" class="modal-btn-close">Close</button>
-        <h2>Замовити дзвінок</h2>
-        <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+        <button type="button" class="modal-btn-close">
+          <svg class="modal-arrow" width="32" height="32">
+            <use href="./images/icons.svg#icon-cross1"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">Замовити дзвінок</h2>
+        <p class="modal-text">
+          Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
+        </p>
         <form name="modal-form" autocomplete="off">
           <div class="form-field">
             <input
