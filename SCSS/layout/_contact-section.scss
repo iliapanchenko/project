@@ -1,0 +1,32 @@
+.contact-section {
+  padding-bottom: 96px;
+
+  &__container {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__text {
+    margin-bottom: 42px;
+    color: var(--color-brand-dark);
+  }
+
+  &__map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+  }
+
+  &__form-field {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto 16px;
+  }
+}

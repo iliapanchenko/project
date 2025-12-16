@@ -2,10 +2,15 @@
 @import './utils/variables';
 @import './base';
 @import './utils/utils.scss';
+@import './components/chef-card';
+@import './components/format-card';
 
 @import './components/buttons';
 @import './components/links';
 @import './layout/section';
+@import './utils/texts';
+@import './layout/container';
+@import './layout/form-terms';
 
 @import './layout/header';
 @import './layout/hero-section';
@@ -14,8 +19,7 @@
 @import './layout/chefs-section';
 @import './layout/formats-section';
 @import './components/carousel';
-@import './layout/contacts-section';
+@import './layout/contact-section';
 @import './layout/footer';
 @import './layout/modal';
-@import './layout/forms';
-
+@import './components/input';
