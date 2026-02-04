@@ -1,5 +1,6 @@
 .traditions-section {
   padding-top: 96px;
+  display: flex;
 
   &__container {
     display: flex;
@@ -29,5 +30,9 @@
 
   &__photo {
     border-radius: 400px 400px 4px 4px;
+
+    @media screen and (max-width: 1200px) {
+      display: none; 
+    }
   }
 }

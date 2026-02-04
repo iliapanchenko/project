@@ -1,5 +1,7 @@
 .chef-card {
   display: flex;
+  flex-direction: column; // На мобільних фото буде НАД текстом
+  align-items: flex-start; // Запобігає розтягуванню фото
   gap: 30px;
 
   &__photo {

@@ -18,9 +18,33 @@
   }
 
   &__menu {
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 64px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    background-color: transparent;
+    border: none;
+    width: 24;
+    height: 24;
+    padding: 0;
+    fill: var(--color-primary-light);
+    
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
   }
 }

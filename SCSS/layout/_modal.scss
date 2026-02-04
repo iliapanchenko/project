@@ -9,10 +9,12 @@
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px 0;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
 
   &.is-hidden {
-    /* display: none; */
+    // display: none;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -57,7 +59,7 @@
   &__btn-close {
     position: absolute;
     top: 40px;
-    left: 810px;
+    right: 20px;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -68,11 +70,11 @@
     fill: var(--color-primary-dark);
   }
 
-  &__form-field{
+  &__form-field {
     margin-bottom: 32px;
   }
 
-  &__button{
+  &__button {
     display: block;
     margin: 0 auto;
     margin-bottom: 24px;

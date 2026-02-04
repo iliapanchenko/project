@@ -78,6 +78,12 @@ ul {
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden {
   position: absolute;
   left: -10000px;
@@ -89,6 +95,8 @@ ul {
 
 .chef-card {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 30px;
 }
 .chef-card__photo {
@@ -200,6 +208,7 @@ ul {
   width: 100%;
   max-width: 1288px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .form-terms {
@@ -236,10 +245,36 @@ ul {
   flex-grow: 1;
 }
 .header__menu {
-  display: flex;
-  gap: 64px;
-  flex-grow: 1;
-  justify-content: center;
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .header__menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+  }
+}
+.header__button {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .header__button {
+    display: block;
+  }
+}
+.header__burger {
+  background-color: transparent;
+  border: none;
+  width: 24;
+  height: 24;
+  padding: 0;
+  fill: var(--color-primary-light);
+}
+@media screen and (min-width: 1280px) {
+  .header__burger {
+    display: none;
+  }
 }
 
 .hero-section {
@@ -253,9 +288,16 @@ ul {
 .hero-section__title {
   color: var(--color-primary-light);
   text-align: center;
-  font-size: 128px;
-  font-weight: 900;
   margin-bottom: 0;
+  font-size: 67px;
+  line-height: 1;
+  font-weight: 900;
+}
+@media screen and (min-width: 768px) {
+  .hero-section__title {
+    font-size: 128px;
+    line-height: 1.5;
+  }
 }
 
 .advantages-section {
@@ -275,6 +317,7 @@ ul {
 
 .traditions-section {
   padding-top: 96px;
+  display: flex;
 }
 .traditions-section__container {
   display: flex;
@@ -297,6 +340,11 @@ ul {
 }
 .traditions-section__photo {
   border-radius: 400px 400px 4px 4px;
+}
+@media screen and (max-width: 1200px) {
+  .traditions-section__photo {
+    display: none;
+  }
 }
 
 .chefs-section__title {
@@ -380,15 +428,31 @@ ul {
 .contact-section__container {
   display: flex;
   gap: 32px;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-section__container {
+    flex-direction: row;
+    align-items: stretch;
+  }
 }
 .contact-section__text {
   margin-bottom: 42px;
   color: var(--color-brand-dark);
 }
 .contact-section__map {
-  flex-shrink: 0;
-  border: none;
+  width: 100%;
+  height: 440px;
   border-radius: 16px;
+  flex-shrink: 0;
+}
+@media screen and (min-width: 1200px) {
+  .contact-section__map {
+    width: 600px;
+    height: auto;
+    min-height: 600px;
+  }
 }
 .contact-section__form-field {
   margin-bottom: 32px;
@@ -495,7 +559,6 @@ ul {
   transition: opacity 0.3s, visibility 0.3s;
 }
 .backdrop.is-hidden {
-  /* display: none; */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -536,7 +599,7 @@ ul {
 .modal__btn-close {
   position: absolute;
   top: 40px;
-  left: 810px;
+  right: 20px;
   background-color: transparent;
   border: none;
   cursor: pointer;
