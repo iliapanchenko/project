@@ -5,15 +5,20 @@
   flex-shrink: 0;
   width: 44px;
   height: 44px;
-  pad: 0px;
+  padding: 0x;
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
-}
 
-.carousel-button:last-child {
+  @media screen and (max-width: $bp-tablet) {
+    display: none;
+  }
+
+
+&.next {
   transform: rotate(180deg);
+}
 }
 
 .carousel-button:hover {

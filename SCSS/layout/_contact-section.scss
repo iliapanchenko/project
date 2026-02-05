@@ -8,7 +8,7 @@
     flex-direction: column; // На мобілці: форма зверху, карта знизу
     gap: 24px;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $bp-desktop) {
       flex-direction: row; // На десктопі: стають поруч
       align-items: stretch; // Вирівнюються за висотою
     }
@@ -21,11 +21,11 @@
 
   &__map {
     width: 100%; // На мобілці займає всю ширину контейнера
-    height: 440px; // Фіксована висота, щоб вона не була "половинчастою"
+    height: 276px; // Фіксована висота, щоб вона не була "половинчастою"
     border-radius: 16px;
     flex-shrink: 0;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $bp-desktop) {
       width: 600px; // Повертаємо ширину на великих екранах
       height: auto; // На десктопі підлаштується під висоту форми
       min-height: 600px; // Робимо її солідною за розміром

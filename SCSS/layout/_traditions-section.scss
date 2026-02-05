@@ -1,6 +1,10 @@
 .traditions-section {
-  padding-top: 96px;
+  padding-top: 40px;
   display: flex;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 96px; // Відступ тільки для десктопа
+  }
 
   &__container {
     display: flex;
@@ -9,17 +13,49 @@
   }
 
   &__content {
-    min-width: 710px;
+    @media screen and (min-width: $bp-desktop) {
+      max-width: 710px;
+    }
   }
 
   &__title {
-    margin-bottom: 42px;
-    line-height: 84px;
-    font-weight: 900;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.2;
+    max-width: 300px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 42px;
+      font-weight: 900;
+      font-size: 64px;
+      line-height: 1.3;
+
+      // ОСЬ ТУТ МАГІЯ: обмежуємо ширину самого заголовка,
+      // щоб слово "традицій" само впало на другий рядок.
+      max-width: 600px;
+    }
   }
 
   &__text {
-    padding-top: 42px;
+    font-size: 16px; // Трішки менший для мобілок (згідно з макетом)
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 600px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px; // Відступ між абзацами
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      font-weight: 400;
+      font-size: 18px;
+
+      &:not(:last-child) {
+        margin-bottom: 42px; // Більший відступ на десктопі
+      }
+    }
   }
 
   &__text {
@@ -29,10 +65,18 @@
   }
 
   &__photo {
-    border-radius: 400px 400px 4px 4px;
+  border-radius: 400px 400px 4px 4px;
+  display: block; // Показуємо фото за замовчуванням
 
-    @media screen and (max-width: 1200px) {
-      display: none; 
-    }
+  // Планшетна версія
+  @media screen and (max-width: $bp-desktop) {
+    width: 300px; // Або будь-яке значення, яке виглядає добре
+    object-fit: cover; // Щоб картинка всередині нових розмірів не деформувалася
   }
+
+  // Мобільна версія (якщо на телефонах воно все ж не потрібне)
+  @media screen and (max-width: $bp-tablet) {
+    display: none;
+  }
+}
 }

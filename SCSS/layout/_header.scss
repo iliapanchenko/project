@@ -3,7 +3,11 @@
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: 16px;
+
+  @media screen and (min-width: $bp-desktop) {
   padding-top: 32px;
+  }
 
   &__container {
     display: flex;
@@ -42,7 +46,7 @@
     height: 24;
     padding: 0;
     fill: var(--color-primary-light);
-    
+
     @media screen and (min-width: $bp-desktop) {
       display: none;
     }
