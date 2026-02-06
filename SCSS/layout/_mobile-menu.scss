@@ -1,20 +1,84 @@
-.mobile-menu{
+.mobile-menu {
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: var(--color-primary-light);
+  padding: 40px 24px; // Додаємо внутрішні відступи для контенту
   transform: translateX(100%);
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
 
-  &.is-open{
+  &.is-open {
     transform: translateX(0);
   }
 
-  &__btn-close{
-    position: absolute;
-    top: 16px;
-    right: 24px;
+  // Стилі для логотипа
+  &__logo {
+    display: inline-block;
+    color: var(--color-primary-dark); // або твій колір тексту
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-decoration: none;
+    margin-bottom: 40px;
+
+    span {
+      font-size: 18px;
+      font-weight: 700;
+    }
   }
+
+  // Стилі для навігації
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus {
+      color: var(--color-brand-light);
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    line-height: 0; // Щоб SVG центрувався чітко
+  }
+
+  &::after {
+    bottom: 0;
+    position: absolute;
+    content: '';
+    width: 180px;
+    height: 240px;
+    right: 0;
+    background-image: url(/images/decor-bread-modal.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    pointer-events: none; // Щоб картинка не заважала натисканню
+  }
+}
+
+body.is-scroll-disabled {
+  overflow: hidden;
 }

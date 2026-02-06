@@ -23,11 +23,15 @@
   }
 
   &::after {
-    width: 380px;
-    height: 190px;
+    width: 310px;
+    height: 185px;
     right: 0;
     background-image: url(/images/decor-bread-large.png);
     pointer-events: none;
+
+    @media screen and (max-width: $bp-tablet) {
+      width: 240px;
+    }
   }
 
   &__container {
@@ -55,12 +59,15 @@
   }
 
   &__logo,
-  &__menu {
-    flex-grow: 1;
-  }
-
+  &__menu,
   &__address-list,
   &__address-info {
+    list-style: none; // Прибираємо маркери
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; // Відступ між рядками 16px
     flex-grow: 1;
   }
 
@@ -79,6 +86,7 @@
 
   &__address-icon {
     fill: var(--color-primary-light);
+    //margin-top: 16px;
   }
 
   &__address-icon:hover {
